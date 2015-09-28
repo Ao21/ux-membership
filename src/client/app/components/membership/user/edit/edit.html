@@ -1,0 +1,53 @@
+<div class="container container--fs">
+	<form [ng-form-model]="userForm" ">
+		<form-group *ng-for="#field of fields ">
+			<span [ng-switch]="field.type ">
+				<template [ng-switch-when]=" 'text' ">
+				<label for="field.name">{{field.display}}</label>
+				<input 
+					type="text "
+					class="form-control "
+					[attr.id]="field.name"
+					[(ng-control)]="field.name "
+					[placeholder]="field.display ">
+				</template>
+				<template [ng-switch-default]">
+				<span>Oops! This control type is unknown. Contact the creator</span>
+				</template>
+		</span>
+		
+		<span [ng-switch]="field.type ">
+				<template [ng-switch-when]=" 'date' ">
+				<label for="field.name">{{field.display}}</label>
+				<input 
+					type="date"
+					class="form-control "
+					[attr.id]="field.name"
+					[(ng-control)]="field.name "
+					[placeholder]="field.display ">
+				</template>
+				<template [ng-switch-default]">
+				<span>Oops! This control type is unknown. Contact the creator</span>
+				</template>
+		</span>
+		
+		<span [ng-switch]="field.type ">
+				<template [ng-switch-when]=" 'number' ">
+				<label for="field.name">{{field.display}}</label>
+				<input 
+					type="number"
+					class="form-control "
+					[attr.id]="field.name"
+					[(ng-control)]="field.name "
+					[placeholder]="field.display ">
+				</template>
+				<template [ng-switch-default]">
+				<span>Oops! This control type is unknown. Contact the creator</span>
+				</template>
+		</span>
+		
+		
+		</form-group>
+	</form>
+	<button (click)="finaliseMember()">Done</button>
+</div>

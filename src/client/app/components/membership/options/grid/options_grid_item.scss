@@ -1,0 +1,32 @@
+@import "../../../../../styles/variables";
+
+:host,
+options-grid-item {
+	&.rescuePlus, &.containerSelected {
+		h6 {
+			color: white;
+		}
+		.media {
+			border: 1px solid white;
+			color: white;
+		}
+		.media__figure {
+			background-color: white;
+		}
+	}
+	.media {
+		margin-bottom:-1px;
+		border: 1px solid $borderColor;
+
+	}
+	.media__figure {
+		width: 20px;
+		height: 20px;
+		border-radius: 100%;
+		background-color: $lightGrey;
+		margin: 10px 10px;
+		
+	
+	}
+
+}

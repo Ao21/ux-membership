@@ -1,0 +1,61 @@
+@import "../../../../../styles/variables";
+
+:host,
+options-grid {
+	width: 100%;
+	display: block;
+	
+	.row { 
+		margin-bottom: $marginQuad;
+	}
+	h6.title {
+		margin: $marginQuad 0 $marginDouble;
+	}
+	
+	.defaultContainer, .bonusContainer {
+		position:relative;
+		float: left;
+		overflow: hidden;
+		width:100%;
+		
+	}
+	
+	.defaultContainer.selected { 
+		h6 {
+			color: white;
+		}
+		color: white;
+		
+		&:before {transform: translateY(0);
+		background-color: $lightGrey;
+		
+		z-index: -1
+		}
+		
+	}
+	.defaultContainer{
+		&:before{
+			content: "";
+			position: absolute;
+			background-color: white;
+			
+			top:0;
+			left: 0;
+			width:100%;
+			height: 100%;
+			transition: 0.66s all cubic-bezier(0.23, 1, 0.32, 1);
+			z-index: -1;
+			transform: translateY(100%);
+			z-index: -1
+		}
+	}
+	.bonusContainer{
+		background-color: $lightGrey;
+		h6 {
+			color: white;
+		}
+	}
+	checkbox {
+		margin-bottom: $marginQuad;
+	}
+}

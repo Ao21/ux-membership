@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20151006 18:16:50.266" generator="Robot 2.9.1 (Python 2.7.10 on win32)">
+<suite source="C:\Users\brettr\Development\Flash\ux-membership\tests\testSuite.txt" id="s1" name="testSuite">
+<test id="s1-t1" name="My Test">
+<kw name="Open Browser to Login Page">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://127.0.0.1/#/membership/landing</arg>
+<arg>chrome</arg>
+<arg>http://127.0.0.1:4444/wd/hub</arg>
+</arguments>
+<msg timestamp="20151006 18:16:50.693" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1/#/membership/landing' through remote server at 'http://127.0.0.1:4444/wd/hub'</msg>
+<kw name="Capture Page Screenshot" library="ExtendedSelenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" endtime="20151006 18:17:02.400" starttime="20151006 18:17:02.399"></status>
+</kw>
+<msg timestamp="20151006 18:17:02.401" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" endtime="20151006 18:17:02.403" starttime="20151006 18:16:50.692"></status>
+</kw>
+<status status="FAIL" endtime="20151006 18:17:02.404" starttime="20151006 18:16:50.691"></status>
+</kw>
+<status status="FAIL" endtime="20151006 18:17:02.405" critical="yes" starttime="20151006 18:16:50.690">Execution terminated by signal</status>
+</test>
+<status status="FAIL" endtime="20151006 18:17:02.408" starttime="20151006 18:16:50.271"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="testSuite" pass="0">testSuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20151006 18:17:02.401" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+</errors>
+</robot>

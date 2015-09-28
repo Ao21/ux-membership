@@ -1,0 +1,62 @@
+@import "../../../../styles/variables";
+
+:host, action-bar {
+	.bar { 
+		position: fixed;
+		top: 0;
+		overflow: hidden;
+		z-index: 1100;
+		
+		height: $navTopHeight;
+		width: 100%;
+		
+		background-color: $darkBlack;
+		color: white;
+	}
+	.action-bar__back {
+		box-sizing: border-box;
+		
+    	width: 50px;
+    	height: 100%;
+		
+		img {
+			width: 25px;
+			margin: 12px 14px;
+		}
+	}
+	.action-bar__titles-container {
+		position: relative;
+		overflow: hidden;
+	}
+	.action-bar__title-container{
+		width: 100%;
+		h6 {
+			text-align: center;
+  			padding: 0;	
+			line-height: 50px;
+			color: white;
+		}
+	}
+	.action-bar__price {
+		padding: 0 10px 0 10px;
+    	border-left: 1px solid rgba(0, 0, 0, 0.05);
+	    
+		h6 {		
+			margin-right: 20px;
+			float:right;
+  		  	line-height: 50px;
+			color: white;
+		}
+	}
+	.progress-nav {
+		position: absolute;
+		width: 100%;
+		top: 50px;
+		.col-xs-3 {
+			margin-bottom: 12px;
+			padding: 0 1px;
+		}
+	}
+}
+
+

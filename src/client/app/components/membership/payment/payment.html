@@ -1,0 +1,46 @@
+<div class="container container--progressbar">
+
+	<form *ng-if="paymentMethod == 'debit--swift'" class="form--nolabel" action="">
+		<div class="form-group">
+			<input type="text" class="form-control" control="email" placeholder="Account Number *">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" control="email" placeholder="Sort Code Number *">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" control="email" placeholder="Name">
+		</div>
+
+	</form>
+	<form *ng-if="paymentMethod == 'debit--iban'" action="" class="form--nolabel">
+		<div class="form-group">
+			<input type="text" class="form-control" control="email" placeholder="Laura Byrne">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" control="email" placeholder="BIC">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" control="email" placeholder="IBAN">
+		</div>
+
+	</form>
+
+	<form *ng-if="paymentMethod == 'credit'" action="" class="form--nolabel">
+		<div class="form-group">
+			<input type="text" class="form-control" control="email" placeholder="Card Number">
+		</div>
+		<div class="form-group credit-details">
+			<input type="text" class="form-control" control="email" placeholder="MM">
+			<input type="text" class="form-control" control="email" placeholder="YY">
+			<input type="text" class="form-control" control="email" placeholder="CVV">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" control="email" placeholder="IBAN">
+		</div>
+		<checkbox class="reverse no-border small">
+			<p class="tiny">These card details can be stored so subsequent purchases on this site do not require you to enter your card details. To
+				avail of this service please tick the checkbox. </p>
+		</checkbox>
+	</form>
+
+</div>

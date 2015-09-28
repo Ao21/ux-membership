@@ -1,0 +1,39 @@
+@import "../../../../styles/variables";
+
+:host, checkbox{
+	display: flex;
+  	align-items: flex-start;
+	  margin-bottom: $margin;
+	  
+	 &.hidden-checkbox {
+		 .checkbox {
+			 display: none;
+		 }
+	 }
+	  
+	&.checked {
+		.checkbox {
+			background-image: url('/images/icons/tick.svg');
+			background-size: 80% 80%;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+	  
+	.content {
+		align-self: center;
+		flex: 1;
+		padding: 0 5%;
+		
+	}
+	
+	&.reverse{
+		.checkbox {
+			order: 0;
+		}
+		.content {
+			order: 1;
+		}
+	}
+	
+}

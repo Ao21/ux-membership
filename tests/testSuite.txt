@@ -1,0 +1,14 @@
+*** Settings ***
+Library  ExtendedSelenium2Library
+
+*** Variables ***
+${SERVER}         localhost:80
+${LOGIN URL}      http://localhost:80/
+
+*** Test Cases ***
+My Test
+    Open Browser to Login Page
+
+*** Keywords ***
+Open Browser to Login Page
+    Open Browser   http://127.0.0.1/#/membership/landing  chrome  \  http://127.0.0.1:4444/wd/hub

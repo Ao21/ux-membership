@@ -1,0 +1,12 @@
+<button type="button" class="close" aria-label="Close" (click)="closeModal()">
+	<span aria-hidden="true">&times;</span></button>
+<div class="carousel">
+	<div class="modal-popup" *ng-for="#option of options">
+		<div class="imgContainer">
+			<img src="{{option.icon}}" alt="">
+		</div>
+		<h1>{{option.name}}</h1>
+		<p>{{option.details}}</p>
+	</div>
+</div>
+

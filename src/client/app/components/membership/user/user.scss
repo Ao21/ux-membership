@@ -1,0 +1,13 @@
+:host,
+membership-user{
+	
+	.user__group .row.additionalChild {
+		display: none;
+	}
+	.user__group .row.additionalChild:nth-of-type(1){ 
+		display: block;
+	}
+	.user__group .set + .row.additionalChild {
+		display: block;
+	}
+}

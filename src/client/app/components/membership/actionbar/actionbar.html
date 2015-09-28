@@ -1,0 +1,29 @@
+<div class="bar l_flex animated fast slideInDown" *ng-if="state.ui.actionBar.visible == true">
+	<div class="action-bar__back" (click)="navigateBack()">
+		<img src="images/icons/arrow-left.svg" alt="Back Button">
+	</div>
+	<div class="action-bar__titles-container l_flex--double ">
+		<div class="action-bar__title-container animation-shift-current">
+			<div class="action-bar__title animation-shift-el">
+				<h6>{{state.ui.actionBar.title}}</h6></div>
+		</div>
+	</div>
+
+	<div class="action-bar__price l_flex--equal" (click)="togglePriceEstimate()">
+		<h6 class="estimate icon triangle--down">${{state.membership.priceEstimate.calculated}}</h6>
+	</div>
+</div>
+<div class="progress-nav" *ng-if="state.ui.actionBar.visible == true">
+	<div class="col-xs-3 animated fast delay-30 slideInDown">
+		<button class="btn btn--progress btn-block"><h6>1</h6></button>
+	</div>
+	<div class="col-xs-3 animated fast delay-45 slideInDown">
+		<button class="btn btn--progress btn-block"><h6>2</h6></button>
+	</div>
+	<div class="col-xs-3 animated fast delay-60 slideInDown">
+		<button class="btn btn--progress btn-block"><h6>3</h6></button>
+	</div>
+	<div class="col-xs-3 animated fast delay-75 slideInDown">
+		<button class="btn btn--progress btn-block"><h6>4</h6></button>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<template [ng-if]="input.visible">
+	<div class="control-group" ng-form>
+		<span [ng-switch]="htmlElementType">
+			<!-- Input -->
+           <template [ng-switch-when]="'input'">
+             <label [attr.for]="input.name">{{input.display}}</label>
+             <input [attr.id]="input.name" 
+			 		[attr.type]="computeInputSubType()" 
+					[(ng-control)]="input.name" 
+                	[attr.placeholder]="input.display">
+           </template>
+		   <!-- Checkbox -->
+           <template [ng-switch-when]="'checkbox'">
+             <div class="pure-controls">
+              <label for="input.name" class="pure-checkbox">
+                  <input [attr.id]="input.name" type="checkbox" 
+				  [(ng-control)]="input.name" 
+				  [(ng-model)]="value.value"> 
+              </label>
+            </div>
+           </template>
+		   <!-- Options -->
+          <template [ng-switch-when]="'option'">
+              <label [attr.for]="input.name">{{input.display}}</label>
+              <select [(ng-model)]="value.value" [(ng-control)]="input.name">
+                  <option *ng-for="#key of input.values" [value]="key">{{key}}</option>
+              </select>{{value.value}}
+            </div>
+           </template>
+		   <!-- Anything Else -->
+           <template [ng-switch-default]">
+                   <span>Oops! This control type is unknown. Contact the creator</span>
+</template>
+</span>
+
+
+</div>
+</template>

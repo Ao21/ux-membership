@@ -1,0 +1,28 @@
+<div class="defaultContainer" [ng-class]={selected:state.rescuePlus.active}>
+	<div class="container">
+		<h6 class="title">Included: AA Rescue Essentials</h6>
+		<section class="row">
+			<options-grid-item *ng-for="#addon of allBenefits | filter: initialFilter.default " [addon]="addon" class="col-xs-12 col-md-3 default"
+			[selected]=true [ng-class]={containerSelected:state.rescuePlus.active}></options-grid-item>
+		</section>
+	</div>
+</div>
+<div class="bonusContainer">
+	<div class="container">
+		<h6 class="title" *ng-if="!state.rescuePlus.active">Not Included: AA Rescue PLUS</h6>
+		<section class="row" *ng-if="!state.rescuePlus.active">
+			<options-grid-item *ng-for="#rescueAddons of state.rescuePlus.benefits | filter: initialFilter.rescueMe" [addon]="rescueAddons"
+			class="col-xs-12 col-md-3 rescuePlus" [selected]=state.rescuePlus.active ></options-grid-item>
+		</section>
+		<checkbox nocheckbox [init]="state.rescuePlus.active" (update)="onToggleRescuePlus($event)" class="checkbox--header inverted">
+			<div class="l_flex">
+				<div *ng-if="state.rescuePlus.active" class="l_flex--equal text-center">
+					<h6>- Remove Rescue Plus</h6></div>
+				<div *ng-if="!state.rescuePlus.active" class="l_flex--equal">
+					<h6>+ Add Rescue Plus</h6></div>
+				<div *ng-if="!state.rescuePlus.active" class="l_flex--equal text-right">
+					<h6>Only €5.75 extra</h6></div>
+			</div>
+		</checkbox>
+	</div>
+</div>

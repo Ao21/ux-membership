@@ -1,0 +1,26 @@
+<div class="container container--fs" load-at-top>
+	<div class="user__group" *ng-for="#memberType of state, #mTypeIndex = index">
+		<h6>{{memberType.header}}</h6>
+		<div class="row" *ng-for="#member of memberType.value, #mIndex = index"  [ng-class]="{set:member.values}" [class]="member.type">
+			<div class="col-xs-12">
+				<button class="btn btn-block btn--form" *ng-if="!member.values" (click)="createMember(member, memberType, mIndex)" [router-link]=['/membership/user-edit']>
+					{{member.title}}
+				</button>
+				<button class="btn btn-block btn--form" *ng-if="member.values" (click)="createMember(member, memberType, mIndex)" [router-link]=['/membership/user-edit']>
+					Edit {{member.values.firstName}}
+				</button>
+			</div>
+			<div class="col-xs-12" *ng-if="member.type == 'primaryUser'">
+			<h6>Share the benefits of AA Membership!
+				<br>Note: Additional Members must live at your address</h6>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<button class="btn btn-default btn-block"  [router-link]=['/membership/addons']>
+				Done
+			</button>
+		</div>
+	</div>
+</div>

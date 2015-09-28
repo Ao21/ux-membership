@@ -1,0 +1,19 @@
+@import "../../../../styles/variables";
+
+:host,
+membership-addons {
+	img {
+		margin-top: -50px;
+		margin-bottom: $marginQuad + 12px;
+	}
+	.details {
+		max-width: 180px;
+		position: absolute;
+		top: 305px;
+		padding:25px 10px;
+		left: 125px;
+		p {
+			font-size: 10px;
+		}
+	}
+}

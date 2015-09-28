@@ -1,0 +1,22 @@
+body {
+  padding-top: 50px;
+  font-family: 'Open Sans';
+  
+  &.scrollfix {
+	  overflow: hidden;
+  }
+  
+  &.progress--isVisible {
+	  padding-top: 50px + 23px;
+  }
+}
+
+
+h1, h2 , h3, h4, h5, h6, p, hr {
+	margin: 0;
+	margin-bottom: $margin;
+}
+
+section {
+	margin-bottom: $margin;
+}

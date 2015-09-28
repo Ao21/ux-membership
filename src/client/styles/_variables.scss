@@ -1,0 +1,67 @@
+
+/* Default Margin Bottom */
+
+$margin: 6px;
+$marginDouble: 12px;
+$marginQuad: 24px;
+
+
+/* Colors*/
+
+$yellow: #F8D347;
+$blue: #1B9AF7;
+$black: #272821;
+$darkBlack: #1A1A1A;
+$lightGrey: #5C5C5C;
+$gold: rgb(248, 211, 71);
+
+/* Background */
+
+$bkColor: white; // Black
+$bkSecondaryColor: $black; // Yellow
+$bkTertiaryColor: $darkBlack;
+
+/* Borders */
+
+$borderWidth: 1px;
+$borderColor: $black;
+
+/* Buttons */
+
+$defaultBtnColor: $black;
+$defaultBtnBorderColor: $black;
+$defaultBtnTxtColor: white;
+
+/* Text */
+
+$defaultTextColor: $black; // White
+$invertedDefaultTextColor: white; // Black
+
+/* input */
+$inputBkColor: rgba(255,255,255,0.3);
+$inputGroupBorder: 1px solid $black;
+$inputTxtColor: $black;
+
+
+/* Table */
+$tableBorder: 1px solid $black;
+$tableTxtColor: $black;
+
+
+/* Tabs */
+$tabBlueText: $black;
+$tabBlueBorder: 1px solid $black;
+$tabBlueBkColor: $black;
+$tabBlueInvertedText: white;
+
+$tabGoldText: $black;
+$tabGoldBorder: 1px solid $black;
+$tabGoldBkColor: $black;
+$tabGoldInvertedText: white;
+
+/* Modals */
+$modalBkColor: white;
+$modalTxtColor: $black;
+
+/* Nav - Top */
+$navTopHeight: 50px;

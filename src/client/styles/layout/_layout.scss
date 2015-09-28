@@ -1,0 +1,20 @@
+//
+// @name  Layout
+// @description  This is a Layout
+// @version  0.0.1
+// @date  Today
+// 
+// @state  .active - Highlights when hovering.
+// 
+// @markup
+//   <menu></menu>
+// 
+
+.l_center {
+	display: table;
+}
+
+.l_center__inner {
+	display: table-cell;
+	vertical-align: middle;
+}

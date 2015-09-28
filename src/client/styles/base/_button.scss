@@ -1,0 +1,42 @@
+.btn-default {
+	background-color: $defaultBtnColor;
+	border: $borderWidth solid $defaultBtnBorderColor;
+	color: $defaultBtnTxtColor;
+	h1, h2, h3, h4, h5, h6 {
+		color: $defaultBtnTxtColor;
+	}
+	margin-bottom: 6px;
+}
+
+.btn-default:active{}
+.btn-default:focus{}
+
+
+
+.btn {
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.btn--progress {
+	background-color: #DDDBE2;
+	border-radius: 0;
+	color: $defaultBtnTxtColor;
+	padding: 4px;
+
+}
+
+
+.btn--form {
+	margin-bottom: $margin;
+	
+	background-color: transparent;
+	border: $borderWidth dashed $borderColor;
+	
+	&.isSet {
+		border: $borderWidth solid $borderColor;
+	}
+	
+}

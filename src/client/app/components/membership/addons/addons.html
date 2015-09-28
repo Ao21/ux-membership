@@ -1,0 +1,31 @@
+<div class="addon" *ng-for="#addon of addons, #addonIn = index">
+	<img src="{{addon.imageUrl}}" alt="">
+	<div class="details">
+		<h4>{{addon.name}}</h4>
+		<p *ng-for="#detail of addon.details">{{detail}}</p>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<checkbox nocheckbox [init]="addon.active" (update)="toggleAddon($event,addonIn)" class="checkbox--header">
+					<div class="l_flex">
+						<div *ng-if="!addon.active" class="l_flex--equal">
+							<h6>Add Membership Pack</h6></div>
+						<div *ng-if="addon.active" class="l_flex--equal">
+							<h6>Remove Membership Pack</h6></div>
+						<div class="text-right">
+							<h6>€27.99</h6></div>
+					</div>
+				</checkbox>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<button class="btn btn-default btn-block" [router-link]="['/membership/payment-frequency']">
+					<h3>Done</h3>
+				</button>
+			</div>
+		</div>
+		
+	</div>
+</div>

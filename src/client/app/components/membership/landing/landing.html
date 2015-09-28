@@ -1,0 +1,18 @@
+<div class="masthead">
+	<div class="container" role="main">
+		<div class="masthead-inner">
+			<section class="row masthead-inner__text"  role="banner">
+				<h1 class="col-md-6 col-md-offset-3">Now Rescuing Family Members</h1>
+				<h4 class="col-md-6 col-md-offset-3">Whoever's car they're in, driver or passenger, we'll be there</h4>
+			</section>
+			<section class="row controls">
+				<div *ng-for="#type of state.types" class="col-xs-12 col-md-3">
+					<button class="btn btn-default btn-block" (click)="setMembershipType(type)">
+						<h3>{{type.name}}</h3>
+					</button>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+

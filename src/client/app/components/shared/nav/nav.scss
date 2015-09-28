@@ -1,0 +1,17 @@
+@import "../../../../styles/variables";
+
+.custom-navbar {
+    background-color: $yellow;
+    border: 0px solid $black;
+	.navbar-brand>img {
+        height: 32px;
+		margin-top: -5px;
+      }
+    
+    @media (max-width:767px) {
+      .navbar-toggle .icon-bar {
+          background-color:$black;
+      }
+      
+    }
+}

@@ -1,0 +1,20 @@
+@import "../../../../../styles/variables";
+
+:host,
+md-carousel-slider {
+	button.close{
+		color: white;
+		position: absolute;
+		top:0;
+		right:0;
+		opacity: 1;
+		padding: 0 2vh;
+		font-size: 10vh;
+		z-index: 99999;
+	}
+	.carousel{
+		background-color: white;
+	}
+
+	
+}

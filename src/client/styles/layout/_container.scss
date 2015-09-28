@@ -1,0 +1,19 @@
+.container--fs{
+	background-color: $bkColor;
+	color: $defaultTextColor;
+	min-height: calc(100vh - 50px);
+}
+
+.container--default {
+	margin-bottom: 6px;
+}
+
+.container--progressbar {
+	position: relative;
+	min-height: calc(100vh - 90px);
+	padding-top: 6px;
+}
+
+.container--padding {
+	padding-bottom: 12px;
+}

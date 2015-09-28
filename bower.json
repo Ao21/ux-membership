@@ -1,0 +1,24 @@
+{
+  "name": "ux-membership",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "baobab": "~2.0.0",
+    "bootstrap-sass": "~3.3.5",
+    "lodash": "~3.10.1",
+    "slick-carousel": "~1.5.8",
+    "toastr": "~2.1.2"
+  },
+  "devDependencies": {
+    "systemjs": "*",
+    "es6-module-loader": "~0.17.6"
+  }
+}
