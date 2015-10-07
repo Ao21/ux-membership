@@ -10,6 +10,7 @@ ElementRef,
 ControlGroup,
 DynamicComponentLoader,
 NgFor, 
+NgIf,
 FormBuilder,
 NgControl,
 Control,
@@ -34,39 +35,44 @@ import {sharedComponents, DynamicLoader} from '../../../../components/shared/mod
 })
 
 @View({
-	directives: [ NgFor, sharedComponents, angularDirectives, CORE_DIRECTIVES ],
+	directives: [ NgFor, NgIf, sharedComponents, angularDirectives, CORE_DIRECTIVES ],
 	templateUrl: 'app/components/membership/user/edit/edit.html',
 	styleUrls: ['app/components/membership/user/edit/edit.css']
 })
 
 export class UserEdit{
-	params: any;
+
 	activeMember: any;
-	data: any;
 	fields: any;
-	name: Control;
+
 	userForm: ControlGroup;
+	ctrl: any = {};
 	
 	constructor(public store: MembershipState, 
-	params: RouteParams, 
+
 	fb: FormBuilder,
 	public router: Router
 	){
-		this.params = params.params;
+
 		this.activeMember = this.store.select('activeMember').get()
 		this.fields = this.activeMember.member.fields;
+		
+		// Create ctrl
 
-		// Create Controls
-		let controls = {};
 		_.forEach(this.fields, (e: any) =>{
-			controls[e.name] = isPresent(this.activeMember.member.values) ? this.activeMember.member.values[e.name] : [''];
+			this.ctrl[e.name] = isPresent(this.activeMember.member.values) ? this.activeMember.member.values[e.name] : [''];
 		})
 		
-		this.userForm = fb.group(controls)
+		_.mapKeys(this.activeMember.member.active,(k,v)=>{
+			this.ctrl[v] = isPresent(this.activeMember.member.values) ? this.activeMember.member.values[v] : [''];
+		})
+		
+	
+		this.userForm = fb.group(this.ctrl)
 		
 		this.userForm.valueChanges.observer({
 			next: (value) => {
-				
+				console.log(value);
 			}
 		})
 
@@ -79,7 +85,7 @@ export class UserEdit{
 	
 	finaliseMember() {
 		this.store.update(['members',this.activeMember.type, this.activeMember.index], _.assign(this.userForm.value, { price:this.activeMember.member.price}));
-		this.router.navigate('/membership/user')
+		this.router.navigateByUrl('/membership/user')
 	}
 	
 	onUpdate() {

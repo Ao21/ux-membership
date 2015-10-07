@@ -32,7 +32,6 @@ export class User{
 	
 	constructor(public store: MembershipState, public router: Router){
 		this.state = this.store.select('membership','memberSetup').get();
-		console.log(this.state);
 	}
 	
 	onUpdate() {

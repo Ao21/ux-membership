@@ -1,9 +1,17 @@
 <div class="container container--fs">
-	<form [ng-form-model]="userForm" ">
-		<form-group *ng-for="#field of fields ">
+	<form [ng-form-model]="userForm">
+		<form-group *ng-if="activeMember.member.active.email">
+			<input 	type="email" 
+					class="form-control" 
+					id="email" 
+					[ng-form-control]="userForm.controls['email']"
+					placeholder="email">
+					<p>Note: For Verification Purposes</p>
+		</form-group>
+		<form-group *ng-for="#field of fields">
+
 			<span [ng-switch]="field.type ">
 				<template [ng-switch-when]=" 'text' ">
-				<label for="field.name">{{field.display}}</label>
 				<input 
 					type="text "
 					class="form-control "
@@ -11,14 +19,8 @@
 					[(ng-control)]="field.name "
 					[placeholder]="field.display ">
 				</template>
-				<template [ng-switch-default]">
-				<span>Oops! This control type is unknown. Contact the creator</span>
-				</template>
-		</span>
-		
-		<span [ng-switch]="field.type ">
+	
 				<template [ng-switch-when]=" 'date' ">
-				<label for="field.name">{{field.display}}</label>
 				<input 
 					type="date"
 					class="form-control "
@@ -26,14 +28,9 @@
 					[(ng-control)]="field.name "
 					[placeholder]="field.display ">
 				</template>
-				<template [ng-switch-default]">
-				<span>Oops! This control type is unknown. Contact the creator</span>
-				</template>
-		</span>
-		
-		<span [ng-switch]="field.type ">
+
+				
 				<template [ng-switch-when]=" 'number' ">
-				<label for="field.name">{{field.display}}</label>
 				<input 
 					type="number"
 					class="form-control "
@@ -41,12 +38,16 @@
 					[(ng-control)]="field.name "
 					[placeholder]="field.display ">
 				</template>
-				<template [ng-switch-default]">
+			
+			<!-- Not working angular 39 -->
+			<!--<template ng-switch-default">
 				<span>Oops! This control type is unknown. Contact the creator</span>
-				</template>
-		</span>
-		
-		
+			</template>-->
+			</span>
+
+		</form-group>
+		<form-group *ng-if="activeMember.member.active.address">
+			Address Active!
 		</form-group>
 	</form>
 	<button (click)="finaliseMember()">Done</button>

@@ -11,4 +11,7 @@ My Test
 
 *** Keywords ***
 Open Browser to Login Page
-    Open Browser   http://127.0.0.1/#/membership/landing  chrome  \  http://127.0.0.1:4444/wd/hub
+    Open Browser                       http://localhost:80/  phantomjs  /
+	Wait Until Page Contains Element   css=div.masthead
+	Maximize Browser Window
+	Capture Page Screenshot

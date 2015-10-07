@@ -3,10 +3,10 @@
 		<h6>{{memberType.header}}</h6>
 		<div class="row" *ng-for="#member of memberType.value, #mIndex = index"  [ng-class]="{set:member.values}" [class]="member.type">
 			<div class="col-xs-12">
-				<button class="btn btn-block btn--form" *ng-if="!member.values" (click)="createMember(member, memberType, mIndex)" [router-link]=['/membership/user-edit']>
+				<button class="btn btn-block btn--form" *ng-if="!member.values" (click)="createMember(member, memberType, mIndex)" [router-link]=['/Membership/UserEdit']>
 					{{member.title}}
 				</button>
-				<button class="btn btn-block btn--form" *ng-if="member.values" (click)="createMember(member, memberType, mIndex)" [router-link]=['/membership/user-edit']>
+				<button class="btn btn-block btn--form" *ng-if="member.values" (click)="createMember(member, memberType, mIndex)" [router-link]=['/Membership/UserEdit']>
 					Edit {{member.values.firstName}}
 				</button>
 			</div>
@@ -18,7 +18,7 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			<button class="btn btn-default btn-block"  [router-link]=['/membership/addons']>
+			<button class="btn btn-default btn-block"  [router-link]=['/Membership/Addons']>
 				Done
 			</button>
 		</div>

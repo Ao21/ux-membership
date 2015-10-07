@@ -34,10 +34,8 @@ export class Landing {
 	setMembershipType(type) {
 		this.store.update(['membership','type'], type);
 		this.store.convertMembership();
-		this.router.navigate('/membership/options');
-	}
-
-	
-	
+		this.router.navigateByUrl('/membership/options');
+	}	
 
 }
+

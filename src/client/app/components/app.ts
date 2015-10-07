@@ -1,5 +1,5 @@
 import {Component, View} from 'angular2/angular2';
-import {RouterOutlet, RouteConfig, ROUTER_DIRECTIVES, Router} from 'angular2/router';
+import {RouteConfig, ROUTER_DIRECTIVES, Router} from 'angular2/router';
 import {FORM_BINDINGS, FORM_DIRECTIVES} from 'angular2/angular2'
 import {Dispatcher} from '../services/services';
 import {Logger} from '../helpers/logger';
@@ -17,13 +17,13 @@ import { MembershipState } from '../services/services';
 })
 
 @View({
-	directives: [RouterOutlet, sharedComponents],
+	directives: [ROUTER_DIRECTIVES, sharedComponents],
 	templateUrl : './app/layout/shell.html'
 })
 
 @RouteConfig([
 	{ path: '/', redirectTo: '/membership/landing'},
-	{ path: '/membership/...', component: MembershipConfiguration, as: 'membership'}
+	{ path: '/membership/...', component: MembershipConfiguration, as: 'Membership'}
 	
 ])
 

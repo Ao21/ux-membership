@@ -150,6 +150,10 @@ export let MembershipInit: any = {
 									{name:'dob', display: 'Date of Birth', visible: true, type: 'date'}
 									
 								],
+							active: {
+								email: true,
+								address: true
+							}
 						}],
 						defaults: { title: 'Add an additional Adult',
 									type: 'additionalAdult', 
@@ -200,6 +204,10 @@ export let MembershipInit: any = {
 
 									
 								],
+							active: [{
+								email: true,
+								address: true
+							}]
 						}],
 						defaults: { 
 							title: 'Add an additional Adult', 

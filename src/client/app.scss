@@ -7,6 +7,14 @@
 
 @import "styles/animations/_animate.scss";
 
+@import "styles/layout/_container.scss";
+
+@import "styles/layout/_flex.scss";
+
+@import "styles/layout/_layout.scss";
+
+@import "styles/layout/_menu.scss";
+
 @import "styles/base/_base.scss";
 
 @import "styles/base/_borders.scss";
@@ -18,14 +26,6 @@
 @import "styles/base/_input.scss";
 
 @import "styles/base/_type.scss";
-
-@import "styles/layout/_container.scss";
-
-@import "styles/layout/_flex.scss";
-
-@import "styles/layout/_layout.scss";
-
-@import "styles/layout/_menu.scss";
 
 @import "styles/modules/_checkbox.scss";
 

@@ -32,7 +32,7 @@ export class PaymentType{
 	select(paymentType: string) {
 		this.store.update(['membership','paymentMethod'], paymentType);
 		if(paymentType == 'credit') {
-			this.router.navigate('/membership/payment');
+			this.router.navigateByUrl('/membership/payment');
 		}
 		else {
 			

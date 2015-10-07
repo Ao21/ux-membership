@@ -1,41 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20151006 18:16:50.266" generator="Robot 2.9.1 (Python 2.7.10 on win32)">
+<robot generated="20151007 15:59:11.394" generator="Robot 2.9.1 (Python 2.7.10 on win32)">
 <suite source="C:\Users\brettr\Development\Flash\ux-membership\tests\testSuite.txt" id="s1" name="testSuite">
 <test id="s1-t1" name="My Test">
 <kw name="Open Browser to Login Page">
 <kw name="Open Browser" library="ExtendedSelenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
-<arg>http://127.0.0.1/#/membership/landing</arg>
-<arg>chrome</arg>
-<arg>http://127.0.0.1:4444/wd/hub</arg>
+<arg>http://localhost:80/</arg>
+<arg>phantomjs</arg>
+<arg>/</arg>
 </arguments>
-<msg timestamp="20151006 18:16:50.693" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1/#/membership/landing' through remote server at 'http://127.0.0.1:4444/wd/hub'</msg>
+<msg timestamp="20151007 15:59:11.807" level="INFO">Opening browser 'phantomjs' to base url 'http://localhost:80/'</msg>
+<status status="PASS" endtime="20151007 15:59:16.206" starttime="20151007 15:59:11.804"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=div.masthead</arg>
+</arguments>
+<status status="PASS" endtime="20151007 15:59:16.225" starttime="20151007 15:59:16.207"></status>
+</kw>
+<kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20151007 15:59:16.240" starttime="20151007 15:59:16.225"></status>
+</kw>
 <kw name="Capture Page Screenshot" library="ExtendedSelenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" endtime="20151006 18:17:02.400" starttime="20151006 18:17:02.399"></status>
+<msg timestamp="20151007 15:59:16.427" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20151007 15:59:16.428" starttime="20151007 15:59:16.240"></status>
 </kw>
-<msg timestamp="20151006 18:17:02.401" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<status status="FAIL" endtime="20151006 18:17:02.403" starttime="20151006 18:16:50.692"></status>
+<status status="PASS" endtime="20151007 15:59:16.429" starttime="20151007 15:59:11.802"></status>
 </kw>
-<status status="FAIL" endtime="20151006 18:17:02.404" starttime="20151006 18:16:50.691"></status>
-</kw>
-<status status="FAIL" endtime="20151006 18:17:02.405" critical="yes" starttime="20151006 18:16:50.690">Execution terminated by signal</status>
+<status status="PASS" endtime="20151007 15:59:16.436" critical="yes" starttime="20151007 15:59:11.800"></status>
 </test>
-<status status="FAIL" endtime="20151006 18:17:02.408" starttime="20151006 18:16:50.271"></status>
+<status status="PASS" endtime="20151007 15:59:16.448" starttime="20151007 15:59:11.399"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="testSuite" pass="0">testSuite</stat>
+<stat fail="0" id="s1" name="testSuite" pass="1">testSuite</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20151006 18:17:02.401" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 </errors>
 </robot>

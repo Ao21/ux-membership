@@ -22,22 +22,23 @@ import { sharedComponents } from './../../components/shared/modules';
 	bindings: [MembershipState]
 })
 
+
 @RouteConfig([
 	{ path: '/', redirectTo: '/landing' },
-	{ path: '/landing', component: Landing, as: 'landing' },
-	{ path: '/options', component: Options, as: 'options' },
-	{ path: '/payment', component: Payment, as: 'payment' },
-	{ path: '/user', component: User, as: 'user' },
-	{ path: '/user/edit', component: UserEdit, as: 'user-edit' },
-	{ path: '/addons', component: Addons, as: 'addons'},
-	{ path: '/price', component: Price, as: 'price'},
-	{ path: '/payment/frequency', component: PaymentFrequency, as: 'payment-frequency' },
-	{ path: '/payment/type', component: PaymentType, as: 'payment-type'}
+	{ path: '/landing', component: Landing, as: 'Landing' },
+	{ path: '/options', component: Options, as: 'Options' },
+	{ path: '/payment', component: Payment, as: 'Payment' },
+	{ path: '/user', component: User, as: 'User' },
+	{ path: '/user/edit', component: UserEdit, as: 'UserEdit' },
+	{ path: '/addons', component: Addons, as: 'Addons'},
+	{ path: '/price', component: Price, as: 'Price'},
+	{ path: '/payment/frequency', component: PaymentFrequency, as: 'PaymentFrequency' },
+	{ path: '/payment/type', component: PaymentType, as: 'PaymentType'}
 
 ])
 
 @View({
-	directives: [RouterOutlet, appDirectives, angularDirectives, sharedComponents, ActionBar],
+	directives: [ROUTER_DIRECTIVES, appDirectives, angularDirectives, sharedComponents, ActionBar],
 	templateUrl: 'app/components/membership/index.html'
 })
 

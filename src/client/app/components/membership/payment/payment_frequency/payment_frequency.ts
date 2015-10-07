@@ -32,7 +32,7 @@ export class PaymentFrequency{
 	
 	select(paymentFrequency: string) {
 		this.store.update(['membership','paymentFrequency'], paymentFrequency);
-		this.router.navigate('/membership/payment/type');
+		this.router.navigateByUrl('/membership/payment/type');
 		
 	}
 
